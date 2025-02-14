@@ -29,6 +29,7 @@ export default function PostForm({ post }) {
     
         if (!userData || !userData.$id) {
             console.error("❌ Error: userId is missing!");
+            alert("User data is not available. Please log in again.");
             return;
         }
     
@@ -64,6 +65,7 @@ export default function PostForm({ post }) {
             }
         }
     };
+    
     
 
     const slugTransform = useCallback((value) => {
